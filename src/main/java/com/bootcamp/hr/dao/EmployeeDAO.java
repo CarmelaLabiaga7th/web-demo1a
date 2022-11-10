@@ -14,7 +14,7 @@ public class EmployeeDAO {
     //private static final String SELECT_ALL_EMPLOYEES = "SELECT employee_id, first_name, last_name, email, salary FROM employees";
 
 
-private static final String SELECT_ALL_EMPLOYEES = "SELECT e.employee_id, e.first_name, e.last_name, e.email, e.salary,d.department_id, d.department_name, e.job_id FROM employees e JOIN departments d ON e.department_id = d.department_id";
+    private static final String SELECT_ALL_EMPLOYEES = "SELECT e.employee_id, e.first_name, e.last_name, e.email, e.salary,d.department_id, d.department_name, e.job_id FROM employees e JOIN departments d ON e.department_id = d.department_id";
     private static final String SELECT_EMPLOYEE_BY_ID = SELECT_ALL_EMPLOYEES + " WHERE employee_id = ?";
     private static final String SELECT_EMPLOYEES_BY_SALARY = SELECT_ALL_EMPLOYEES + " WHERE salary BETWEEN ? AND ?";
     private static final String UPDATE_EMPLOYEE_SALARY = "UPDATE employees SET salary = ? WHERE employee_id = ?";
